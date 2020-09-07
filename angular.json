@@ -88,6 +88,7 @@
               "src/assets"
             ],
             "styles": [
+              "/node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "zopper-selection"
+    }
+  },
+  "defaultProject": "zopper-selection",
+  "cli": {
+    "analytics": "8786aed9-81b4-452e-8dcf-c20a16aea392"
+  }
 }

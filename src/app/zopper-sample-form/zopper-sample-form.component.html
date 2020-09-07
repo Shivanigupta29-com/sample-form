@@ -1,0 +1,127 @@
+<div>
+    <img class="backGround"
+        src="https://img.freepik.com/free-vector/blue-white-modern-abstract-background_111397-34.jpg?size=626&ext=jpg">
+    <div id="EmpHeroAndEmpInfo" class="gdGrid">
+
+        <div id="EmpHero" class="blurred hidden " data-employer-id="937928" data-photo-frame-id="HeroLbFrame-937928">
+            <div class="sqLogoLink hideDesk hideTab ">
+                <div><a class="tighten" href="/Overview/Working-at-Zopper-EI_IE937928.11,17.htm" data-ajax="true"><span
+                            class="sqLogo tighten medSqLogo logoOverlay"><img
+                                src="https://media.glassdoor.com/sqls/937928/zopper-squarelogo-1592810787324.png"
+                                class="" alt=" Logo" title=""></span></a></div>
+            </div><img src="https://www.glassdoor.com/app/static/img/banners/default-ei-banner.jpg?v=b803424i5"
+                class="banner blur" id="BlurredHero" alt=""><svg xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <filter id="BlurFilter">
+                    <feGaussianBlur id="BlurFilter1" stdDeviation="10" data-filterid="1"></feGaussianBlur>
+                </filter>
+                <image filter="url(#BlurFilter)" width="103%" height="188" x="-6" y="-6"
+                    xlink:href="https://www.glassdoor.com/app/static/img/banners/default-ei-banner.jpg?v=b803424i5">
+                </image>
+            </svg><canvas id="BlurredHeroCanvas"></canvas>
+        </div>
+        <div class="empInfo tbl hideHH ">
+            <div class="logo cell"><a href="/Overview/Working-at-Zopper-EI_IE937928.11,17.htm" data-ajax="true"
+                    class="sqLogoLink">
+                    <span class="sqLogo tighten lgSqLogo logoOverlay">
+                        <img src="https://media.glassdoor.com/sql/937928/zopper-squarelogo-1592810787324.png" class=""
+                            alt=" Logo" title=""></span></a>
+            </div>
+        </div>
+        <div class="heading">
+            <h2> Sample Form </h2>
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit(postForm.value)"#postForm="ngForm">
+                <div class="row form-margin">
+                    <div class="form-group col-sm-2">
+                        <label>Title</label>
+                        <select formControlName="title" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
+                            <option value=""></option>
+                            <option value="Mr">Mr</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Miss">Miss</option>
+                            <option value="Ms">Ms</option>
+                        </select>
+                        <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                            <div *ngIf="f.title.errors.required">Title is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-5">
+                        <label>First Name</label>
+                        <input type="text" formControlName="firstName" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-5">
+                        <label>Last Name</label>
+                        <input type="text" formControlName="lastName" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="contactMethod" value="1"formControlName="user_notification"> Email
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="contactMethod" value="2"formControlName="user_notification"> Phone
+                    </label>
+                </div>
+                <div class="row form-margin">
+                    <div class="form-group col-sm-6">
+                        <label>Email</label>
+                        <input type="text" formControlName="email" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Email is required</div>
+                            <div *ngIf="registerForm.get('email').hasError('email')">Email must be a valid email address</div>
+                        </div>
+                    </div>
+                
+               
+                    <div class="form-group col-sm-6">
+                        <label>Phone no.</label>
+                        <input type="number" formControlName="phone" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" />
+                        <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+                            <div *ngIf="f.phone.errors.required">Phone no. is required</div>
+                            <div *ngIf="f.phone.errors.pattern">Please, Enter 10 digit Mobile Number</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row form-margin">
+                    <div class="form-group col-sm-6 ">
+                        <label>Password</label>
+                        <input type="password" formControlName="password" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">Password is required</div>
+                            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label>Confirm Password</label>
+                        <input type="password" formControlName="confirmPassword" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
+                        <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                            <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
+                            <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-primary mr-1">Register</button>
+                    <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

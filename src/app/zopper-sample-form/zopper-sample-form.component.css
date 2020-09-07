@@ -1,0 +1,114 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+/* @import "~font-awesome/css/font-awesome.css"; */
+.backGround{
+    width: 99%;
+    height:100%;
+    position: absolute;
+}
+
+.hidden, .hpField {
+    display: none;
+}
+#EmpHero.blurred {
+    display: block !important;
+    overflow: hidden;
+    height: 100px;
+}
+#EmpHero {
+    position: relative;
+    min-height: 59px;
+    max-height: 185px;
+    font-size: 0;
+}
+#EmpHero .sqLogoLink>div a {
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    max-height: 72px;
+}
+#EmpHero .sqLogoLink {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 1.5%;
+}
+#EmpHero.blurred>img {
+    width: calc(100% + 20px);
+    margin: -10px;
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+#EmpHero img {
+    width: 100%;
+    height: auto;
+    max-height: 185px;
+}
+ span.sqLogo.lgSqLogo img {
+    width: 130px;
+    height: 130px;
+}
+#EmpHero .sqLogoLink>div .sqLogo {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    background: none;
+    border: none;
+}
+#EmpHero .sqLogoLink>div .sqLogo>img, #EmpHero .sqLogoLink>div .sqLogo>span {
+    height: 100%;
+    width: auto;
+    max-height: none;
+    border: 1px solid #fff;
+    -webkit-filter: none;
+    filter: none;
+    margin-top: 0;
+    margin-left: 0;
+}
+#EmpHero.blurred>img {
+    width: calc(100% + 20px);
+    margin: -10px;
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+#EmpHero img {
+    width: 100%;
+    height: auto;
+    max-height: 185px;
+}
+div.blurred svg {
+    width: 100%;
+}
+div.blurred canvas {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#EIHdrModule div.empInfo.tbl, .eiHdrModule div.empInfo.tbl {
+    width: 100%;
+}
+#EIHdrModule div.empInfo.tbl div.logo.cell .sqLogo, .eiHdrModule div.empInfo.tbl div.logo.cell .sqLogo {
+    position: relative;
+    padding: 0;
+}
+span.sqLogo, span.ceoFrame {
+    position: relative;
+    display: inline-block;
+    padding: 2px;
+    background: white none;
+    border: 1px solid #dedede;
+    line-height: 0;
+    margin-top: -120px;
+    margin-left: 20px;
+}
+.heading{
+        position: relative;
+        text-align: center;
+}
+.form-margin{
+    margin:10px;
+}
